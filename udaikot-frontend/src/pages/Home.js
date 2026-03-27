@@ -12,12 +12,6 @@ export default function Home() {
     guests: 1,
   });
 
-  const [contactData, setContactData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const [showForm, setShowForm] = useState(false);
 
   const [customerData, setCustomerData] = useState({
@@ -34,26 +28,6 @@ export default function Home() {
     fetchResort();
   }, []);
 
-
-  const handleContact = async (e) => {
-      e.preventDefault();
-
-      try {
-        await API.post("/contact", contactData);
-        alert("Message Sent Successfully ✅");
-
-        // clear form
-        setContactData({
-          name: "",
-          email: "",
-          message: "",
-        });
-
-      } catch (error) {
-        console.log(error);
-        alert("Message Failed ❌");
-      }
-    };
 
   return (
     <div className="bg-[#f5f1e8]">
@@ -247,97 +221,59 @@ export default function Home() {
       </motion.div>
 
       {/* 🔥 CONTACT SECTION */}
-      <motion.div
-        id="contact"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="bg-[#f5f1e8] py-32 px-6 md:px-16"
-      >
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
-
-        {/* LEFT SIDE */}
-        <div>
-          <p className="text-[#c9a46c] uppercase tracking-[4px] mb-3">
-            Contact
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-light mb-6">
-            Get In Touch
-          </h2>
-
-          <p className="text-gray-600 mb-8 text-lg">
-            Experience luxury and nature at The Udaikot Farm.
-            Reach out to us for bookings, queries, or special arrangements.
-          </p>
-
-          <div className="space-y-4 text-gray-700">
-            <p>📍 Kasniyawad, Udaipur, Rajasthan</p>
-            <p>📞 +91 9667207277</p>
-            <p>📧 udaikotfarm@gmail.com</p>
-          </div>
-
-          {/* MAP */}
-          <div className="mt-6">
-            <iframe
-              src="https://www.google.com/maps?q=Udaipur,Rajasthan&output=embed"
-              width="100%"
-              height="250"
-              className="rounded-xl border"
-              loading="lazy"
-              title="location map"
-              ></iframe>
-          </div>
-        </div>
-
-        {/* RIGHT FORM */}
-        <form
-          onSubmit={handleContact}
-          className="bg-white p-6 md:p-8 rounded-3xl shadow-xl space-y-4"
+        <motion.div
+          id="contact"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="bg-[#f5f1e8] py-32 px-6 md:px-16"
         >
 
-            <input
-              type="text"
-              placeholder="Your Name"
-              value={contactData.name}
-              onChange={(e) =>
-                setContactData({ ...contactData, name: e.target.value })
-              }
-              className="w-full p-3 rounded border"
-            />
+          <div className="max-w-5xl mx-auto text-center">
 
-            <input
-              type="email"
-              placeholder="Your Email"
-              value={contactData.email}
-              onChange={(e) =>
-                setContactData({ ...contactData, email: e.target.value })
-              }
-              className="w-full p-3 rounded border"
-            />
+            <p className="text-[#c9a46c] uppercase tracking-[4px] mb-3">
+              Contact
+            </p>
 
-            <textarea
-              placeholder="Your Message"
-              rows="5"
-              value={contactData.message}
-              onChange={(e) =>
-                setContactData({ ...contactData, message: e.target.value })
-              }
-              className="w-full p-3 rounded border"
-            ></textarea>
+            <h2 className="text-4xl md:text-5xl font-light mb-6">
+              Get In Touch
+            </h2>
 
-            <button
-              type="submit"
-              className="w-full bg-black text-white py-3 rounded-xl hover:bg-[#c9a46c]"
+            <p className="text-gray-600 mb-8 text-lg">
+              For bookings and inquiries, contact us directly.
+            </p>
+
+            <div className="space-y-4 text-gray-700 text-lg">
+              <p>📍 Kasniyawad, Udaipur, Rajasthan</p>
+              <p>📞 +91 9667207277</p>
+              <p>📧 udaikotfarm@gmail.com</p>
+            </div>
+
+            {/* MAP */}
+            <div className="mt-8">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.735836634948!2d73.64522597461034!3d24.735947750230046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967fd24bf5381ef%3A0x974653fbacd4dbf!2sMG%20Villa!5e0!3m2!1sen!2sin!4v1774639126959!5m2!1sen!2sin"
+                width="100%"
+                height="250"
+                className="rounded-xl border"
+                loading="lazy"
+                title="Udaikot Farm Location"
+              ></iframe>
+            </div>
+
+            {/* WHATSAPP BUTTON */}
+            <a
+              href="https://wa.me/918278610098?text=Hello%20I%20want%20to%20book%20Udaikot%20Farm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-8 bg-black text-white px-8 py-3 rounded-full hover:bg-[#c9a46c]"
             >
-              Send Message
-            </button>
+              Chat on WhatsApp
+            </a>
 
-          </form>
+          </div>
 
-        </div>
       </motion.div>
 
       <a

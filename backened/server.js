@@ -23,7 +23,6 @@ app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/resorts", resortRoutes);
 app.use("/api/bookings", bookingRoutes);
-app.use("/api/contact", contactRoutes);
 
 // DB connect
 mongoose.connect(process.env.MONGO_URI)
