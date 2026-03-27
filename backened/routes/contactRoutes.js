@@ -8,7 +8,9 @@ router.post("/", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: "mishu777seth@gmail.com",
         pass: "fpjz ubfq mzcg bqst",
@@ -16,10 +18,10 @@ router.post("/", async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: "mishu777seth@gmail.com",
+      from: "mishu777seth@gmail.com", // 🔥 IMPORTANT
       to: "mishu777seth@gmail.com",
       subject: "New Contact Message",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: Name: ${name}\nEmail: ${email}\nMessage: ${message},
     });
 
     res.json({ message: "Email sent successfully" });
