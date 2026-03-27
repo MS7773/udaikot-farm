@@ -34,22 +34,6 @@ export default function Home() {
     fetchResort();
   }, []);
 
-  const handleBooking = async () => {
-    try {
-      await API.post("/bookings", {
-        user: "123456789",
-        resort: resort._id,
-        fromDate: bookingData.fromDate,
-        toDate: bookingData.toDate,
-        totalAmount: resort.price,
-      });
-
-      alert("Booking Successful 🎉");
-    } catch (error) {
-      console.log(error);
-      alert("Booking Failed ❌");
-    }
-  };
 
   const handleContact = async (e) => {
       e.preventDefault();
@@ -91,6 +75,7 @@ export default function Home() {
           <img
             src="/assets/logo.jpeg"
             className="w-24 mb-6 opacity-90"
+            alt="resort image"
           />
 
           <motion.p
@@ -191,6 +176,7 @@ export default function Home() {
               <img
                 src="/images/4.jpeg"
                 className="w-full h-[500px] object-cover hover:scale-110 transition duration-700"
+                alt="resort image"
               />
             </div>
 
@@ -252,6 +238,7 @@ export default function Home() {
               <img
                 src={img}
                 className="w-full h-[300px] object-cover hover:scale-110 transition duration-700"
+                alt="resort image"
               />
             </div>
           ))}
@@ -296,10 +283,11 @@ export default function Home() {
           <div className="mt-6">
             <iframe
               src="https://www.google.com/maps?q=Udaipur,Rajasthan&output=embed"
-              width="100%"
+              width="100%
               height="250"
               className="rounded-xl border"
-              loading="lazy"
+                loading="lazy"
+                title="location map"
             ></iframe>
           </div>
         </div>
@@ -361,6 +349,7 @@ export default function Home() {
         <img
           src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
           className="w-8 h-8"
+          alt="resort image"
         />
       </a>
 
