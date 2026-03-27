@@ -283,12 +283,12 @@ export default function Home() {
           <div className="mt-6">
             <iframe
               src="https://www.google.com/maps?q=Udaipur,Rajasthan&output=embed"
-              width="100%
+              width="100%"
               height="250"
               className="rounded-xl border"
-                loading="lazy"
-                title="location map"
-            ></iframe>
+              loading="lazy"
+              title="location map"
+              ></iframe>
           </div>
         </div>
 
