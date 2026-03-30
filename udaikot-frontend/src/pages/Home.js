@@ -246,7 +246,7 @@ export default function Home() {
 
             <div className="space-y-4 text-gray-700 text-lg">
               <p>📍 Kasniyawad, Udaipur, Rajasthan</p>
-              <p>📞 +91 9667207277</p>
+              <p>📞 +91 9829027277</p>
               <p>📧 udaikotfarm@gmail.com</p>
             </div>
 
