@@ -253,7 +253,7 @@ export default function Home() {
             {/* MAP */}
             <div className="mt-8">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.735836634948!2d73.64522597461034!3d24.735947750230046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967fd24bf5381ef%3A0x974653fbacd4dbf!2sMG%20Villa!5e0!3m2!1sen!2sin!4v1774639126959!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.735940081741!2d73.64766569999999!3d24.7359442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967fd1e8649cc47%3A0xc417e7fac7064de!2sThe%20Udaikot%20farm!5e0!3m2!1sen!2sin!4v1774888589210!5m2!1sen!2sin"
                 width="100%"
                 height="250"
                 className="rounded-xl border"
