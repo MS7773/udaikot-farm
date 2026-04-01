@@ -69,7 +69,7 @@ export default function Home() {
           </motion.h1>
 
           <p className="mb-8 text-lg text-gray-200">
-            Experience Luxury in Nature 🌿
+            Udaikot Farm in Udaipur is a luxury resort offering peaceful stay and premium experience.
           </p>
 
           <button className="border border-white px-8 py-3 hover:bg-white hover:text-black transition">
@@ -164,7 +164,7 @@ export default function Home() {
               </h2>
 
               <p className="text-gray-600 mb-8 text-lg">
-                {resort.description}
+                Udaikot Farm in Udaipur is a luxury resort offering peaceful stay and premium experience.
               </p>
 
               {/* <span className="text-3xl text-[#c9a46c] font-semibold">
