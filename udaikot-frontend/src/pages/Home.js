@@ -225,7 +225,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-3xl">
                 <img
                   src={img}
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[400px] object-contain bg-black"
                   alt="Udaikot Farm view"
                 />
 
