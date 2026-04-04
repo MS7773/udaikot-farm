@@ -156,7 +156,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-3xl shadow-2xl">
               <img
                 src="/images/4.jpeg"
-                className="w-full h-[250px] sm:h-[400px] md:h-[500px] object-contain bg-black rounded-2xl"
+                className="w-full h-[250px] sm:h-[400px] md:h-[500px] object-cover object-centre rounded-3xl"
                 alt="resort view"
               />
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
             Gallery
           </p>
 
-          <h2 className="text-5xl font-light">
+          <h2 className="text-3xl sm:text-5xl font-light tracking-wide">
             Experience The Udaikot Farm
           </h2>
         </div>
