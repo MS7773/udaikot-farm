@@ -149,7 +149,7 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="py-32 px-6 md:px-16"
+          className="py-20 md:py-32 px-6 md:px-16"
         >
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
@@ -193,7 +193,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="bg-black text-white py-32 px-6 md:px-16"
+        className="bg-black text-white py-20 md:py-32 px-6 md:px-16"
       >
         <div className="text-center mb-12">
           <p className="text-[#c9a46c] uppercase tracking-[4px] mb-3">
@@ -248,7 +248,7 @@ export default function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="bg-[#f5f1e8] py-32 px-6 md:px-16"
+          className="bg-[#f5f1e8] py-20 md:py-32 px-6 md:px-16"
         >
 
           <div className="max-w-5xl mx-auto text-center">
