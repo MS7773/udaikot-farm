@@ -82,6 +82,9 @@ export default function Home() {
           <button className="border border-white px-8 py-3 hover:bg-white hover:text-black transition">
             Explore Stay
           </button>
+          <p className="mt-4 text-sm text-gray-300">
+            Book your luxury stay today ✨
+          </p>
         </div>
       </div>
 
