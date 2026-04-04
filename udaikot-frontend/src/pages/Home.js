@@ -156,7 +156,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-3xl shadow-2xl">
               <img
                 src="/images/4.jpeg"
-                className="w-full h-[500px] object-cover hover:scale-110 transition duration-700"
+                className="w-full h-[250px] sm:h-[400px] md:h-[500px] object-contain bg-black rounded-2xl"
                 alt="resort view"
               />
             </div>
