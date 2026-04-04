@@ -1,3 +1,10 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 import { useEffect, useState } from "react";
 import API from "../services/api";
 import { motion } from "framer-motion";
@@ -181,11 +188,11 @@ export default function Home() {
       )}
 
       {/* 🔥 GALLERY (ANIMATED) */}
-      <motion.div id="gallery"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        viewport={{ once: true }}
+      <motion.div
+        id="gallery"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         className="bg-black text-white py-32 px-6 md:px-16"
       >
         <div className="text-center mb-12">
@@ -198,26 +205,40 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2500 }}
+          loop={true}
+          className="max-w-5xl mx-auto"
+        >
           {[
             "/images/1.jpeg",
             "/images/2.jpeg",
             "/images/3.jpeg",
             "/images/4.jpeg",
             "/images/5.jpeg",
-            "/images/6.jpeg"
+            "/images/6.jpeg",
           ].map((img, i) => (
-            <div key={i} className="overflow-hidden rounded-2xl">
-              <img
-                src={img}
-                className="w-full h-[300px] object-cover hover:scale-110 transition duration-700"
-                alt="resort view"
-              />
-            </div>
-          ))}
+            <SwiperSlide key={i}>
+              <div className="relative overflow-hidden rounded-3xl">
+                <img
+                  src={img}
+                  className="w-full h-[400px] object-cover"
+                  alt="Udaikot Farm view"
+                />
 
-        </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                  <p className="text-white text-xl tracking-wide">
+                    Udaikot Farm
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </motion.div>
 
       {/* 🔥 CONTACT SECTION */}
