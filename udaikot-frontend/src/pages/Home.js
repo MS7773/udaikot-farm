@@ -45,7 +45,14 @@ export default function Home() {
       {/* 🔥 HERO */}
       <div id="home" className="h-screen relative overflow-hidden">
 
-        <video autoPlay loop muted className="absolute w-full h-full object-cover">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          className="absolute w-full h-full object-cover"
+        >
           <source src="/assets/resort.mp4" type="video/mp4" />
         </video>
 
@@ -68,20 +75,43 @@ export default function Home() {
           </motion.p>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-4xl md:text-6xl font-light mb-6"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-3xl sm:text-4xl md:text-6xl font-light mb-4"
           >
-            THE UDAIKOT FARM
+            Luxury Escape in Udaipur
           </motion.h1>
 
-          <p className="mb-8 text-lg text-gray-200">
-            Udaikot Farm in Udaipur is a luxury resort offering peaceful stay and premium experience.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-lg sm:text-xl tracking-wide text-[#c9a46c] mb-4"
+          >
+            The Udaikot Farm
+          </motion.p>
 
-          <button className="border border-white px-8 py-3 hover:bg-white hover:text-black transition">
-            Explore Stay
-          </button>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mb-8 text-lg text-gray-200"
+          >
+            Udaikot Farm in Udaipur is a luxury resort offering peaceful stay and premium experience.
+          </motion.p>
+
+          <motion.a
+            href="#booking"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            className="border border-white px-8 py-3 hover:bg-white hover:text-black transition inline-block"
+          >
+            Book Your Stay
+          </motion.a>
+
           <p className="mt-4 text-sm text-gray-300">
             Book your luxury stay today ✨
           </p>
