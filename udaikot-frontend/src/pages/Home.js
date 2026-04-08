@@ -318,7 +318,7 @@ export default function Home() {
 
             {/* WHATSAPP BUTTON */}
             <a
-              href="https://wa.me/918278610098?text=Hello%20I%20want%20to%20book%20Udaikot%20Farm"
+              href="https://wa.me/919829027277?text=Hello%20I%20want%20to%20book%20Udaikot%20Farm"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-8 bg-black text-white px-8 py-3 rounded-full hover:bg-[#c9a46c]"
@@ -331,7 +331,7 @@ export default function Home() {
       </motion.div>
 
       <a
-        href="https://wa.me/918278610098?text=Hello%20I%20want%20to%20book%20Udaikot%20Farm"
+        href="https://wa.me/919829027277?text=Hello%20I%20want%20to%20book%20Udaikot%20Farm"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition z-50"
@@ -372,7 +372,7 @@ export default function Home() {
                 Check-out: ${bookingData.toDate}
                 Guests: ${bookingData.guests}`;
 
-                const url = `https://wa.me/918278610098?text=${encodeURIComponent(message)}`;
+                const url = `https://wa.me/919829027277?text=${encodeURIComponent(message)}`;
 
                 window.open(url, "_blank");
 
